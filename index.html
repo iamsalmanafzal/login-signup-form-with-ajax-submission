@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Google Font === font-family: 'Titillium Web', sans-serif; -->
+		<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400" rel="stylesheet">
+		<!-- Font Awesome Style-Sheet -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+		<!-- Rest Css -->
+		<link rel="stylesheet" href="css/reset.css">
+		<!-- Main Style Sheet -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Animate.Css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<!-- Modernizr.Js -->
+		<script src="js/modernizr.js"></script>
+	  	
+		<title>Log In &amp; Sign Up Form with Ajax Submit</title>
+	</head>
+	<body>
+		<!-- Video For Background -->
+		<div id="bg-video">
+			<!-- Video by http://coverr.co/ "Big City Life" -->
+			<video poster="Big-City-Life/Snapshots/Big-City-Life.jpg" id="bgvid" autoplay="" loop="" muted="">
+	            <source src="Big-City-Life/Mp4/Big-City-Life.mp4" type="video/mp4">
+	            <source src="Big-City-Life.webm" type="video/webm" />
+	        </video>
+		</div>
+
+		<!-- Login Form -->
+		<div class="main-container">
+			<div class="form-container">
+				<div class="wrapper">
+					<ul class="form-tabs">
+						<li class="item active" data-tab="login-form">Login Form</li>
+						<li class="item" data-tab="signup-form">Sign Up Form</li>
+					</ul>
+					
+					<div class="tab active" data-tab="login-form">
+						<form onsubmit="return false;" >
+							<!-- Username Field -->
+							<fieldset>
+								<input type="text" name="username" id="username" placeholder="Username" />
+							</fieldset>
+							<!-- Password Field -->
+							<fieldset>
+								<input type="password" name="password" id="password" placeholder="Password" />
+								<span class="password-show-hide"><i class="fa fa-eye" aria-hidden="true"></i></span>
+							</fieldset>
+							<fieldset>
+								<label class="rememberMe">
+									<input type="checkbox" name="remember" id="remember"  /> Remember Me
+								</label>
+								<span class="forgetYourPassword" >Forget your password?</span>
+							</fieldset>
+							<!-- Button Field -->
+							<fieldset>
+								<button name="sumit" id="submit-login"> Login </button>
+							</fieldset>
+						</form>
+						<span class="divider or"></span>
+						<div class="social-login">
+							<a class="button social facebook">
+								<i class="fa fa-facebook"></i> Sign in with Facebook
+					        </a>
+						</div>
+					</div>
+					
+					<div class="tab" data-tab="signup-form">
+						<form onsubmit="return false;" >
+							<!-- Username Field -->
+							<fieldset>
+								<input type="text" name="username" id="username" placeholder="Username" />
+							</fieldset>
+							<!-- Email Field -->
+							<fieldset>
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</fieldset>
+							<!-- Password Field -->
+							<fieldset>
+								<input type="password" name="password" id="password" placeholder="Password" />
+								<span class="password-show-hide"><i class="fa fa-eye" aria-hidden="true"></i></span>
+							</fieldset>
+							<fieldset>
+								<label class="termsCondition">
+									<input type="checkbox" name="agree" id="agree" /> I Agree to the <a href="#0">Terms</a>
+								</label>
+							</fieldset>
+							<!-- Button -->
+							<fieldset>
+								<button name="sumit" id="submit-signup"> Sign Up </button>
+							</fieldset>
+						</form>
+						<span class="divider or"></span>
+						<div class="social-login">
+							<a class="button social facebook">
+								<i class="fa fa-facebook"></i> Sign Up in with Facebook
+					        </a>
+						</div>
+					</div>
+
+					<div class="tab" data-tab="forget-form">
+						<form onsubmit="return false;" >
+							<!-- Email Field -->
+							<p>Forget your password? Please enter your email address. <br /> An email will be sent to your email address with password reset link.</p>
+							<fieldset>
+								<input type="email" name="forget-email" id="forget-email" placeholder="E-mail" />
+							</fieldset>
+							<!-- Button Field -->
+							<fieldset>
+								<button name="sumit" id="submit-forget-password"> Submit </button>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<!-- Main JS File -->
+		<script src="js/main.js"></script>
+	</body>
+</html>

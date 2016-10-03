@@ -1,0 +1,286 @@
+/* --------------------------------
+    Primary style
+-------------------------------- */
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:not(i) {
+    font-family: 'Titillium Web', sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #fff;
+}
+p {
+    color: #fff;
+}
+img {
+    max-width: 100%;
+}
+input::-ms-clear, textarea::-ms-clear {
+    display: none;
+}
+fieldset {
+    padding: 0;
+    margin: 0 0 18px 0;
+    border: none; 
+}
+label {
+    display: block;
+}
+input:not([type="checkbox"]):not([type="radio"]) {
+    background: #fff;
+    padding: 6px 24px;
+    height: 50px;
+    line-height: 1.4;
+    color: #444;
+    border: solid 1px #9b9b9b;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 18px;
+    font-weight:300;
+    outline: none;
+    letter-spacing: -0.2px;
+    box-shadow: 0 0px 8px 1px rgba(0,0,0,0.7)
+}
+
+.rememberMe,
+.termsCondition {
+    font-size: 16px;
+    color: #fff;
+    float: left;
+}
+.rememberMe input[type="checkbox"],
+.termsCondition input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
+.forgetYourPassword {
+    float: right;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* --------------------------------
+    Main components
+-------------------------------- */
+/* Background Video Fixed*/
+#bg-video {
+    position: fixed;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* adding a dotted effect */
+#bg-video:after {
+    content:"";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:url(../images/bg-pattern.png) repeat rgba(0,0,0,0.6);
+}
+/* Video Fixed for all screen sizes */
+#bg-video video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../Big-City-Life/Snapshots/Big-City-Life.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+/* main-container */
+.main-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding:20px; 
+    position: absolute;
+}
+.main-container .form-container {
+    display: table-cell;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    display: inline-block;
+    min-height: 510px;
+}
+.main-container .form-container form {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+
+    max-width: 450px;
+}
+.form-tabs {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 450px;
+    display: inline-block;
+}
+.form-tabs li {
+    display: inline-block;
+    padding: 10px 15px;  
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase; 
+    cursor: pointer;
+    width: 49%;
+    border-bottom: 3px solid transparent;
+}
+.form-tabs li:hover {
+    border-bottom:3px dotted #fff;
+}
+.form-tabs li.active {
+    border-bottom:3px solid #fff;
+}
+
+div.tab:not(.active) {
+    display: none;
+}
+.main-container .form-container form fieldset{
+    position: relative;
+}
+.main-container .form-container form fieldset.error input{
+    box-shadow:inset 0 0 8px 1px #ce0202;
+}
+#password {
+    padding-right: 52px;
+}
+.password-show-hide {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+.password-show-hide i {
+    color: #555;
+}
+.password-show-hide i:hover {
+    color: #050505;
+    cursor: pointer;
+}
+button,
+.button {
+    display: block;
+    padding: 0px 16px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    font-size: 18px;
+    font-weight: normal;
+    outline: none;
+    background: #2185d0;
+    cursor: pointer;
+}
+button:hover {
+    background: #24a0ff;
+}
+button[disabled="disabled"] {
+    pointer-events: none;
+    background:#60b044;
+}
+.button.social {
+    text-align: left;
+    overflow: hidden;
+    padding-left:0;
+    text-decoration: none;
+}
+.button.social i {
+    border-right: 1px solid rgba(0,0,0,0.3);
+    padding: 0px 20px;
+    text-align: left;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    background: rgba(0,0,0,0.1);
+    margin-right: 30px;
+}
+.button.social.facebook {
+    background: #3b5998;
+}
+.button.social.facebook:hover {
+    background: #1550c7;
+}
+
+/* Divider */
+.divider {
+    clear: both;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin:25px 0;
+    position: relative;
+    text-align: center;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cccccc+50,cccccc+50&0+1,1+50,0+100 */
+    background: -moz-linear-gradient(left,  rgba(204,204,204,0) 1%, rgba(204,204,204,1) 50%, rgba(204,204,204,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(204,204,204,0) 1%,rgba(204,204,204,1) 50%,rgba(204,204,204,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(204,204,204,0) 1%,rgba(204,204,204,1) 50%,rgba(204,204,204,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cccccc', endColorstr='#00cccccc',GradientType=1 ); /* IE6-9 */
+
+}
+
+.divider.or:after {
+    content: "or";
+    position: absolute;
+    background: #ccc;
+    color: #222;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    line-height:30px;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px; 
+    margin-left: -15px;
+}
